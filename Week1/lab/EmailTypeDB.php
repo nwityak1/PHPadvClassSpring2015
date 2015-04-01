@@ -15,8 +15,8 @@ $validator = new Validator();
 $emailType = filter_input(INPUT_POST, 'emailtype');
 $errors = array();
 if ( $util->isPostRequest() ) {
-    if ( !$validator->emailIsValid($emailType) ) {
-        $errors[] = 'email Type is not valid';
+    if ( !$validator->emailTypeIsValid($emailType) ) {
+        $errors[] = 'Email Type is not valid!';
     }
 }
 if ( count($errors) > 0 ) {
